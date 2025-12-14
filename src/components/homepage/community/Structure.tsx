@@ -18,7 +18,7 @@ const Structure: React.FC<IProps> = ({ heading, text, image, bgColor, style }) =
     <div className="max-[500px]:w-full">
       <div
         style={{ boxShadow: '0px 4px 4px 0px #00000040' }}
-        className="flex max-[500px]:flex-col items-start gap-[20px] h-[600px] min-h-[300px] min-[500px]:max-h-[500px] max-[500px]:min-h-[100%] max-[500px]:h-full "
+        className="flex max-[600px]:flex-col gap-[20px] items-center h-[600px] min-h-[300px] min-[600px]:max-h-[600px] max-[600px]:min-h-[100%] max-[600px]:h-full "
       >
         <div
           className={clsx(

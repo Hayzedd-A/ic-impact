@@ -117,16 +117,16 @@ const FormOne: React.FC<FormOneProps> = ({ formik, motionDirection }) => {
           />
 
           <TextField
-            name="telephone"
+            name="whatsappNo"
             type="text"
-            value={formik.values.telephone}
+            value={formik.values.whatsappNo}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            label="Telephone"
-            error={formik.touched.telephone ? formik.errors.telephone : ''}
+            label="Whatsapp Number"
+            error={formik.touched.whatsappNo ? formik.errors.whatsappNo : ''}
             className="bg-[#F4F4F4] mt-1"
             requiredIndicator
-            placeholder="Enter your telephone here"
+            placeholder="Enter your whatsapp number here"
           />
 
           <TextField

@@ -33,7 +33,7 @@ const Community: React.FC = () => {
           <Structure
             heading="Inner-Circle Of IMPACT Community"
             image={Star}
-            text="At IC-IMPACT, we are passionate about supporting individuals committed to growth and empowerment. Our InnerCircle of Impact is a select group of 20 members who receive personalized mentorship, intensive training, and financial support to grow their businesses. This exclusive circle is highly competitive, and we encourage all members to strive for a place among these top achievers."
+            text="At IC-IMPACT, we are deeply committed to supporting individuals who are ready to grow, scale, and be empowered. The Inner Circle of Impact is a closed mentorship community of just 20 people, trained for one month to strengthen their walk with God, gain clarity in purpose, and advance financially.It is important to note that the Inner Circle is not free it requires a commitment fee.This mentorship program begins immediately after the three month discipleship phase in the Circle of Impact.We encourage all members to strive for a place among these top achievers."
             bgColor="orangish"
             style="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[200px]"
           />
@@ -42,7 +42,7 @@ const Community: React.FC = () => {
           <Structure
             heading="Circle Of IMPACT Community"
             image={stick}
-            text="At the Circle of Impact Community, we are focused on empowering individuals who are determined to grow and make a difference. Our community provides over 500 members with access to weekly training, valuable resources, and opportunities for success. We are committed to fostering a space for growth."
+            text="At the Circle of Impact Community, we are dedicated to empowering individuals who are determined to grow and make a difference. The Circle of Impact is a structured 3-month discipleship program designed to build spiritual growth, guide purpose discovery, and strengthen financial empowerment.Our community now serves over 1,000 members, giving them access to weekly trainings, valuable resources, and meaningful opportunities for success. We remain committed to creating a safe and transformative space where growth is not just encouraged but made possible"
             bgColor="redish"
             style="absolute z-[1] top-1/2 left-[0px] transform  -translate-y-1/2 max-w-[150px]"
           />

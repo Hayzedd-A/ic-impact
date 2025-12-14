@@ -5,7 +5,7 @@ import actionImg from '@/assets/actionImg.webp';
 import ButtonItem from '@/components/button/Button';
 import { Link } from 'react-router-dom';
 
-const CallToAction: React.FC = () => {
+const CallToAction: React.FC<{ hideButton?: boolean }> = ({ hideButton = false }) => {
   return (
     <div
       style={{
@@ -21,9 +21,9 @@ const CallToAction: React.FC = () => {
           Join the Movement
         </h1>
         <Texts>Ready to make an impact?</Texts>
-        <ButtonItem className="mt-4">
+        {!hideButton && <ButtonItem className="mt-4">
           <Link to="/signup">Sign Up</Link>
-        </ButtonItem>
+        </ButtonItem>}
       </div>
     </div>
   );

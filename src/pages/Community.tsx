@@ -10,6 +10,7 @@ import Benefit from '@/components/community/Benefit';
 import Circle from '@/components/community/Circle';
 import Citizen from '@/components/contact/Citizen';
 import Requirements from '@/components/community/requirements/Requirements';
+import CallToAction from '@/components/about/CallToAction';
 
 const Community: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Community: React.FC = () => {
         <Circle />
         <Citizen />
         <Requirements />
+        <CallToAction hideButton={true}/>
         <Footer />
       </div>
     </SmoothScrolling>

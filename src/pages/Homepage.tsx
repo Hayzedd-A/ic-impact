@@ -8,6 +8,7 @@ import Approach from "@/components/homepage/Approach";
 import Footer from "@/components/footer/Footer";
 import SmoothScrolling from "@/components/animation/SmoothScrolling";
 import ScrollToTop from "@/components/button/ScrollToTop";
+import IntroVideo from "@/components/homepage/IntroVideo";
 
 const Homepage: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Homepage: React.FC = () => {
       <ScrollToTop />
       <div className="mx-auto overflow-x-hidden">
         <Hero />
+        <IntroVideo />
         <OurFoundation />
         <Discover />
         <Community />

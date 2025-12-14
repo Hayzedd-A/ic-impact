@@ -1,21 +1,21 @@
-import React from 'react';
-import Structure from './Structure';
-import Texts from '@/components/Texts';
-import listElipse from '@/assets/listEllipse.png';
-import ButtonItem from '@/components/button/Button';
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Structure from "./Structure";
+import Texts from "@/components/Texts";
+import listElipse from "@/assets/listEllipse.png";
+import ButtonItem from "@/components/button/Button";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Requirements: React.FC = () => {
   const List = [
     {
       id: 1,
-      benefit: 'Be between the ages of 12 and 25',
+      benefit: "Be between the ages of 12 and 25",
     },
     {
       id: 2,
-      benefit: 'Complete the Community Sign-Up form with all honesty',
+      benefit: "Have a Track record of seriousness while in Circle of Impact",
     },
   ];
 
@@ -63,20 +63,22 @@ const Requirements: React.FC = () => {
         <Structure active={true} inView={inView}>
           <div className="flex flex-col gap-[20px] w-[90%] mx-auto py-[30px]">
             <Texts>
-              Please note that membership in this community is based on a manual review of
-              all applicants' form submissions. The IC-IMPACT Community Team will assess
-              all applications and select those who we believe would benefit most from our
-              support.
+              Please note that membership in this community is based on a manual
+              review of all community members activities and attentiveness
+              during there stay in the Circle of Impact. The IC-IMPACT Community
+              Team will assess all applications and select those who we believe
+              would benefit most from our support.
             </Texts>
             <Texts>
               <strong>
-                In addition to meeting the general requirements, applicants must:
+                In addition to meeting the general requirements, applicants
+                must:
               </strong>
             </Texts>
             <motion.ul
               variants={containerVariants}
               initial="hidden"
-              animate={inView ? 'visible' : 'hidden'}
+              animate={inView ? "visible" : "hidden"}
               className="w-[80%] max-[1200px]:w-[100%] flex flex-col gap-3 "
             >
               {List.map((item) => (
@@ -99,10 +101,10 @@ const Requirements: React.FC = () => {
           <div className="flex flex-col justify-center items-center mx-auto">
             <Structure active={true} inView={inViewOne}>
               <div className="w-[90%] mx-auto py-[30px]">
-                There are no additional requirements to join the Circle of Impact
-                Community. As long as you meet the general community criteria and complete
-                the application form, you are automatically eligible to become a part of
-                this community.
+                There are no additional requirements to join the Circle of
+                Impact Community. As long as you meet the general community
+                criteria and complete the application form, you are
+                automatically eligible to become a part of this community.
               </div>
             </Structure>
           </div>

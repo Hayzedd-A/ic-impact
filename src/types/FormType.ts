@@ -1,7 +1,7 @@
 export interface FormValues {
   name: string;
   email: string;
-  telephone: string;
+  whatsappNo: string;
   dob: string;
   city: string;
   gender: string;

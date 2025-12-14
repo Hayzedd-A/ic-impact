@@ -19,7 +19,7 @@ const SignUpForm: React.FC = () => {
     initialValues: {
       name: '',
       email: '',
-      telephone: '',
+      whatsappNo: '',
       dob: '',
       city: '',
       gender: '',
@@ -48,7 +48,7 @@ const SignUpForm: React.FC = () => {
         .email('Your Email')
         .required('Your email is required')
         .nullable(),
-      telephone: Yup.string()
+      whatsappNo: Yup.string()
         .matches(/^\d+$/, 'Phone number must be numeric')
         .required('Phone number is required')
         .nullable(),
@@ -130,7 +130,7 @@ const SignUpForm: React.FC = () => {
         return [
           'name',
           'email',
-          'phone',
+          'whatsappNo',
           'dob',
           'city',
           'eduBackground',

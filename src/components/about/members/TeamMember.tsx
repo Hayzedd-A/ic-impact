@@ -15,11 +15,11 @@ const TeamMember: React.FC<IProps> = ({
   memberPosition,
 }) => {
   return (
-    <div className="min-[1100px]:min-h-[80vh] max-[950px]:min-h-auto max-[580px]:mx-auto flex flex-col items-center justify-center">
-      <div className="flex flex-col gap-4 max-w-[300px]  ">
-        <div className="h-[300px] w-[250px]">
+    <div className=" flex flex-col items-center justify-center">
+      <div className="flex flex-col gap-4 ">
+        <div className="h-[400px]">
           <img
-            className="w-full h-full object-cover rounded-[10px]"
+            className="w-full h-full  rounded-[10px]"
             src={image}
             alt={imageAlt}
           />
@@ -30,8 +30,8 @@ const TeamMember: React.FC<IProps> = ({
           }}
           className="flex flex-col items-center gap-1 text-center rounded-md bg-white"
         >
-          <Texts>{memberName} </Texts>
-          <Texts>{memberPosition} </Texts>
+          {/* <Texts>{memberName} </Texts>
+          <Texts>{memberPosition} </Texts> */}
         </div>
       </div>
     </div>

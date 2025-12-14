@@ -159,7 +159,7 @@ const ContactForm: React.FC = () => {
         </div>
         <ButtonItem className="!bg-orangish mx-auto text-white mt-3">
           {' '}
-          {isSubmitting ? <span>Sent</span> : 'Send message'}{' '}
+          {isSubmitting ? <span>Sent</span> : 'Submit'}{' '}
         </ButtonItem>
       </div>
     </form>

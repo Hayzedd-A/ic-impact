@@ -1,6 +1,6 @@
 import logo from '@/assets/logo.webp';
 import Texts from '../Texts';
-import { Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { MdOutlineWhatsapp } from 'react-icons/md';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa6';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -95,6 +95,12 @@ const Footer = () => {
                   support@icimpact.online{' '}
                 </a>
               </li>
+              <li className=" flex items-center gap-[7px]">
+                <span className="pt-1">{<Phone size={16} />} </span>
+                <a href="tel:+2349050876798" rel="noopener noreferrer">
+                  +234 905 087 6798{' '}
+                </a>
+              </li>
             </ul>
           </div>
           <div className="flex flex-col items-start gap-4">
@@ -166,7 +172,7 @@ const Footer = () => {
         </div>
         <div className="bg-white h-[1px] w-[100%] "></div>
         <div className="text-center">
-          <Texts>© 2024 IC-IMPACT. All Rights Reserved </Texts>
+          <Texts>© {new Date().getFullYear()} IC-IMPACT. All Rights Reserved </Texts>
         </div>
       </div>
     </div>

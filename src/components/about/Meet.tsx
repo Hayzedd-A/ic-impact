@@ -38,7 +38,7 @@ const Meet = () => {
               </span>
             </div>
             <section ref={refTwo} className="flex flex-col gap-4 items-start mt-4">
-              <FadeIn up={true} inView={inViewTwo}>
+              <FadeIn className='flex flex-col gap-2' up={true} inView={inViewTwo}>
                 <Texts>
                   I’m Jephthah, a child of God, a minister of the Gospel, and a successful
                   Data Engineer with a deep passion for impacting young lives.{' '}
