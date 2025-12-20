@@ -2,8 +2,8 @@ import React from "react";
 import Footer from "@/components/footer/Footer";
 import SmoothScrolling from "@/components/animation/SmoothScrolling";
 import ScrollToTop from "@/components/button/ScrollToTop";
-import IntroVideo from "@/components/homepage/IntroVideo";
 import TestimonialHero from "@/components/testimonials/TestimonialHero";
+import TestimonialContainer from "@/components/testimonials/TestimonialContainer";
 
 const Testimonials: React.FC = () => {
   return (
@@ -11,8 +11,7 @@ const Testimonials: React.FC = () => {
       <ScrollToTop />
       <div className="mx-auto overflow-x-hidden">
         <TestimonialHero />
-
-        {/* <IntroVideo /> */}
+        <TestimonialContainer  />
         <Footer />
       </div>
     </SmoothScrolling>

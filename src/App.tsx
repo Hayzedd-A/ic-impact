@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Signup from './pages/Signup';
 import Testimonials from './pages/Testimonials';
+import PastEvents from './pages/PastEvents';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/past-events" element={<PastEvents />} />
       </Route>
     </Routes>
   );

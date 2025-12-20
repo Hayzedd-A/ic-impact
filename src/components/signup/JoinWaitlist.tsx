@@ -20,7 +20,7 @@ const Joinwaitlist = () => {
             >
                 <Texts>
                     <FadeInText delay={0.4} inView={inViewOne}>
-                    Thanks for your interest in IC-IMPACT COMMUNITY! Unfortunately, registration for our second cohort has ended as of June 2025. The next cohort is coming up in September 2025. 
+                    Thanks for your interest in IC-IMPACT COMMUNITY! Unfortunately, registration for our second cohort has ended as of June 2025. The next cohort is coming up in January 2026. 
                     <br/>Join our waitlist to get notified about upcoming opportunities!
                     </FadeInText>
                 </Texts>

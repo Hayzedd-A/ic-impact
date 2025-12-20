@@ -8,7 +8,8 @@ import Approach from "@/components/homepage/Approach";
 import Footer from "@/components/footer/Footer";
 import SmoothScrolling from "@/components/animation/SmoothScrolling";
 import ScrollToTop from "@/components/button/ScrollToTop";
-import IntroVideo from "@/components/homepage/IntroVideo";
+import VimeoPlayer from "@/components/homepage/IntroVideo";
+import LinkedInAwardMarque from "@/components/homepage/LinkedInAwardMarque";
 
 const Homepage: React.FC = () => {
   return (
@@ -16,7 +17,8 @@ const Homepage: React.FC = () => {
       <ScrollToTop />
       <div className="mx-auto overflow-x-hidden">
         <Hero />
-        <IntroVideo />
+        <LinkedInAwardMarque />
+        <VimeoPlayer videoUrl="https://player.vimeo.com/video/1141925851" autoplay={true} muted={false} loop={true} className="h-[40em]" />
         <OurFoundation />
         <Discover />
         <Community />
@@ -29,3 +31,4 @@ const Homepage: React.FC = () => {
 };
 
 export default Homepage;
+

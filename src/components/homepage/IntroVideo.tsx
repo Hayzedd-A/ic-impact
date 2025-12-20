@@ -1,19 +1,40 @@
-import React, { useRef, useEffect } from 'react';
-import Player from '@vimeo/player';
+import React, { useRef, useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Play, Pause } from 'lucide-react';
 
 // Declare Vimeo on window for TypeScript
 declare global {
   interface Window {
-    Vimeo?: {
-      Player: typeof Player;
-    };
+    Vimeo?: any;
   }
 }
 
-const IntroVideo: React.FC = () => {
+interface VimeoPlayerProps {
+  videoUrl: string;
+  className?: string;
+  autoplay?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+}
+
+const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
+  videoUrl,
+  className = '',
+  autoplay = false,
+  loop = false,
+  muted = false,
+}) => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const playerRef = useRef<Player | null>(null);
+  const playerRef = useRef<any>(null);
+
+  // Extract video ID from URL
+  const getVideoId = (url: string): string => {
+    const match = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    return match ? match[1] : '';
+  };
+
+  const videoId = getVideoId(videoUrl);
 
   useEffect(() => {
     let observer: IntersectionObserver;
@@ -32,12 +53,11 @@ const IntroVideo: React.FC = () => {
     };
 
     loadVimeoPlayerSDK().then(() => {
-      if (iframeRef.current && !playerRef.current) {
-        playerRef.current = new Player(iframeRef.current);
-        
-        // Unmute the video when player is ready
+      if (iframeRef.current && !playerRef.current && window.Vimeo) {
+        playerRef.current = new window.Vimeo.Player(iframeRef.current);
+
         playerRef.current.ready().then(() => {
-          playerRef.current?.setVolume(1).catch((error) => {
+          playerRef.current?.setVolume(muted ? 0 : 1).catch((error: any) => {
             console.error('Error setting volume:', error);
           });
         });
@@ -48,24 +68,23 @@ const IntroVideo: React.FC = () => {
           (entries) => {
             entries.forEach((entry) => {
               if (playerRef.current) {
-                if (entry.isIntersecting) {
-                  playerRef.current.play().catch((error) => {
-                    // Handle potential errors like user gesture requirement
+                if (entry.isIntersecting && autoplay) {
+                  playerRef.current.play().catch((error: any) => {
                     if (error.name === 'NotAllowedError') {
-                      console.warn('Autoplay prevented by browser. User interaction required.');
+                      console.warn('Autoplay prevented by browser.');
                     } else {
                       console.error('Error playing video:', error);
                     }
                   });
                 } else {
-                  playerRef.current.pause().catch((error) => {
+                  playerRef.current.pause().catch((error: any) => {
                     console.error('Error pausing video:', error);
                   });
                 }
               }
             });
           },
-          { threshold: 0.5 } // Trigger when 50% of the video is visible
+          { threshold: 0.5 }
         );
 
         observer.observe(videoContainerRef.current);
@@ -77,22 +96,23 @@ const IntroVideo: React.FC = () => {
         observer.unobserve(videoContainerRef.current);
       }
       if (playerRef.current) {
-        playerRef.current.destroy().catch((error) => {
+        playerRef.current.destroy().catch((error: any) => {
           console.error('Error destroying Vimeo player:', error);
         });
         playerRef.current = null;
       }
     };
-  }, []);
-
+  }, [videoUrl, autoplay, muted]);
+// https://player.vimeo.com/video/1141925851?h=2593f6619c&api=1&autoplay=0&loop=0&byline=0&portrait=0&title=0&muted=0
   return (
-    <div ref={videoContainerRef} className="h-[40em]">
+    <div ref={videoContainerRef} className={`${className}`}>
       <iframe
         ref={iframeRef}
         title="vimeo-player"
-        src="https://player.vimeo.com/video/1141925851?h=2593f6619c&api=1&autoplay=0&loop=0&byline=0&portrait=0&title=0&muted=0"
+        src={`https://player.vimeo.com/video/${videoId}?api=1&autoplay=0&loop=${loop ? 1 : 0}&byline=0&portrait=0&title=0&muted=${muted ? 1 : 0}`}
         width="100%"
         height="100%"
+        className="rounded-lg"
         referrerPolicy="strict-origin-when-cross-origin"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
         allowFullScreen
@@ -101,4 +121,5 @@ const IntroVideo: React.FC = () => {
   );
 };
 
-export default IntroVideo;
+export default VimeoPlayer;
+

@@ -1,5 +1,5 @@
 import Texts from '@/components/Texts';
-import groupSelfie from '@/assets/groupSelfie.webp';
+import groupSelfie from '@/assets/about-1.jpeg';
 import ButtonItem from '@/components/button/Button';
 import { useInView } from 'react-intersection-observer';
 import FadeIn from '../animation/FadeIn';

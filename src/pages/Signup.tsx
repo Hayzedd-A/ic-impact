@@ -13,8 +13,8 @@ const Signup = () => {
       <ScrollToTop />
       <ToastContainer />
       <SignUpHero />
-      {/* <Joinwaitlist /> */}
-      <SignUpForm/>
+      <Joinwaitlist />
+      {/* <SignUpForm/> */}
       <Footer />
     </SmoothScrolling>
   );

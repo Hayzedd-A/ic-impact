@@ -1,6 +1,6 @@
 import Texts from '@/components/Texts';
 import React from 'react';
-import running from '@/assets/peopleRunning.webp';
+import running from '@/assets/attachment.jpeg';
 import { useInView } from 'react-intersection-observer';
 import FadeIn from '../animation/FadeIn';
 
@@ -16,7 +16,7 @@ const AboutIc: React.FC = () => {
         className="min-[1800px]:max-w-[1200px] min-[1800px]:w-[50%] w-full max-[1800px]:max-w-[1100px] max-[1800px]:w-[90%] mx-auto flex flex-wrap items-center justify-between gap-[30px] max-[950px]:my-[50px]"
       >
         <div className="relative max-w-[400px] max-[950px]:mx-auto">
-          <img src={running} alt="img" />
+          <img src={running} className='rounded-[30px]' alt="img" />
           <div className="bg-black/40 hover:bg-transparent absolute top-0 left-0 rounded-[30px] w-full h-full transition-all duration-700 ease-in-out"></div>
         </div>
         <FadeIn up={false} className="max-[950px]:mx-auto" inView={inView}>

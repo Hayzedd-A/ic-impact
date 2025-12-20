@@ -24,19 +24,20 @@ const Team = () => {
         className="min-[1800px]:max-w-[1200px] max-[1800px]:max-w-[1100px] max-[1800px]:w-[90%] mx-auto flex flex-col gap-y-[4em] max-[1100px]:flex-wrap min-[580px]:items-start max-[580px]:items-center justify-between gap-y-[30px] gap-x-[20px] max-[850px]:my-[50px]"
       >
         <div className="flex gap-[2em] flex-wrap justify-between max-w-[1200px] mx-auto">
+
           <FadeIn
             className="mx-auto mx-0"
             inView={inView}
             up
             upValue={40}
             opacity={false}
-            delay={0.2}
+            delay={0.5}
           >
             <TeamMember
-              image={Abiodun}
-              imageAlt={`${Abiodun} Image`}
-              memberName="Jerome Abiodun"
-              memberPosition="Trainer"
+              image={Adeyeye}
+              imageAlt={`${Adeyeye} Image`}
+              memberName="Adeyeye Oluwafemi"
+              memberPosition="Lead Circle Trainer"
             />
           </FadeIn>
           <FadeIn
@@ -58,15 +59,15 @@ const Team = () => {
             className="mx-auto mx-0"
             inView={inView}
             up
-            upValue={40}
+            upValue={50}
             opacity={false}
-            delay={0.5}
+            delay={1.1}
           >
             <TeamMember
-              image={Adeyeye}
-              imageAlt={`${Adeyeye} Image`}
-              memberName="Adeyeye Oluwafemi"
-              memberPosition="Lead Circle Trainer"
+              image={Lucas}
+              imageAlt={`${Lucas} Image`}
+              memberName="Ojo Lucas"
+              memberPosition="Head Skill Trainer"
             />
           </FadeIn>
         </div>
@@ -102,18 +103,18 @@ const Team = () => {
             />
           </FadeIn>
           <FadeIn
-            className="mx-0 max-w-[17em]"
+            className="mx-auto mx-0"
             inView={inView}
             up
-            upValue={50}
+            upValue={40}
             opacity={false}
-            delay={1.1}
+            delay={0.2}
           >
             <TeamMember
-              image={Lucas}
-              imageAlt={`${Lucas} Image`}
-              memberName="Ojo Lucas"
-              memberPosition="Head Skill Trainer"
+              image={Abiodun}
+              imageAlt={`${Abiodun} Image`}
+              memberName="Jerome Abiodun"
+              memberPosition="Trainer"
             />
           </FadeIn>
           <FadeIn

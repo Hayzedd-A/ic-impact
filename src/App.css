@@ -1,47 +1,49 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+#react-day-picker-calendar-0 {
+  width: 30px;
+  height: 25px;
+  overflow-y: clip;
+}
 
- .line-animation {
-          position: absolute;
-          left: 45%;
-          bottom: -125px;
-          height: 120px;
-          width: 1px;
-          border-left: 2px dashed rgb(0, 0, 0, 0.5);
-          transform-origin: top;
-          transform: scaleY(0);
-        }
+.line-animation {
+  position: absolute;
+  left: 45%;
+  bottom: -125px;
+  height: 120px;
+  width: 1px;
+  border-left: 2px dashed rgb(0, 0, 0, 0.5);
+  transform-origin: top;
+  transform: scaleY(0);
+}
 
+.secondLineAnimation {
+  position: absolute;
+  left: 45%;
+  bottom: -125px;
+  height: 120px;
+  width: 1px;
+  border-left: 2px solid rgb(0, 0, 0, 0.5);
+  transform-origin: top;
+  transform: scaleY(0);
+}
 
+.draw {
+  transform: scaleY(1);
+}
 
-         .secondLineAnimation {
-          position: absolute;
-          left: 45%;
-          bottom: -125px;
-          height: 120px;
-          width: 1px;
-          border-left: 2px solid rgb(0, 0, 0, 0.5);
-          transform-origin: top;
-          transform: scaleY(0);
-        }
-
-        .draw {
-          transform: scaleY(1);
-        }
-
-        .fade-in {
-          opacity: 1;
-          transition: opacity 0.5s ease;
-        }
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
 
 @media only screen and (max-width: 540px) {
-  .line-animation, .secondLineAnimation {
+  .line-animation,
+  .secondLineAnimation {
     bottom: -185px;
     height: 180px;
   }
 }
-
-        
