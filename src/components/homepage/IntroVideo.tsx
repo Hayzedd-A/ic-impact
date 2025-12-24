@@ -1,6 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Play, Pause } from 'lucide-react';
+import React, { useRef, useEffect } from 'react';
 
 // Declare Vimeo on window for TypeScript
 declare global {

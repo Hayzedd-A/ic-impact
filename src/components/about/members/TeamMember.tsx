@@ -1,4 +1,3 @@
-import Texts from "@/components/Texts";
 import React from "react";
 
 type IProps = {
@@ -11,8 +10,6 @@ type IProps = {
 const TeamMember: React.FC<IProps> = ({
   image,
   imageAlt,
-  memberName,
-  memberPosition,
 }) => {
   return (
     <div className=" flex flex-col items-center justify-center">

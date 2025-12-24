@@ -1,15 +1,7 @@
 import Texts from "../Texts";
 import ButtonItem from "../button/Button";
-import Josh from "@/assets/josh.webp";
-// import manager from '@/assets/manager.webp';
 import teamMembers from "@/assets/team-members.png";
-import Shepherd from "@/assets/shepherd.webp";
-import gooder from "@/assets/gooder.png";
-import ShepherdStar from "@/assets/shepherdStar.webp";
-import strategist from "@/assets/strategist.webp";
-import Ellipse from "@/assets/Ellipse.webp";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 import { HashLink as Link } from "react-router-hash-link";
 import FadeIn from "../animation/FadeIn";
 
